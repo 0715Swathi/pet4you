@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pets 4 you</title>
+	<link rel="stylesheet"  href="stylesheet.css">
+</head>
+<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<div class="toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="container">
+		<div class="header">
+			<div class="navbar">
+				<a href="#">Home</a>
+				<a href="#about">About</a>
+				<a href="#Gallery">Gallery</a>
+				<a href="#contact">Contact Us</a>
+			</div>
+			<div class="head-content">
+				<p class="name">Pets 4 You </p>
+				<p class="desc">All varities of dogs,fish including food available</p>
+			</div>
+				
+		</div>
+	<div class="About-section" id="about">
+		<h2>About Us</h2>
+		<img src="anna2.jpeg" alt="Anna" width="50%">
+		<h3>I am Jaya Chandra Reddy</h3>
+		<p>Although in first step there will be both loss and profit,I fought with all those critical situation.
+		Finally,Now I am in this situation its all because of hardwork and interest on work.</p>
+	</div>  
+	<div class="Gallery-Section" id="Gallery">
+		<h2>Gallery</h2>
+			<video autoplay muted loop id="myVideo" height="150px" width="75%">
+  				<source src="fish vedio 1.mp4" type="video/mp4">
+			</video>
+			<video autoplay muted loop id="myVideo" height="150px" width="75%">
+				<source src="fish vedio 3.mp4" type="video/mp4">
+			</video>
+			<video autoplay muted loop id="myVideo" height="150px" width="75">
+				<source src="fish vedio 5.mp4" type="video/mp4">
+			</video>
+			<video autoplay muted loop id="myVideo" height="150px" width="75%">
+				<source src="fish vedio 6.mp4" type="video/mp4">
+			</video>
+	</div>
+	<div class="contact-section" id="contact">
+		<span>Contact Us</span>
+		<div class="inputs">
+			<input type="text" class="inp-name" placeholder="Name">
+			<input type="text" class="inp-mail" placeholder="Your Email">
+			<textarea rows="10" cols="40" placeholder="Your Message" class="inp-msg"></textarea>
+			<input type="button" class="inp-btn" value="Submit">
+		</div>
+	</div> 
+	<div class="copyright">
+		<p>Pets4You &copy; 2007</p>
+	</div>
+</div>
+<script>
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function()
+ {
+ 	scrollFunction()
+ };
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".toggle").click(function(){
+			$(".navbar").slideToggle()
+		});
+
+		$(window).resize(function(){
+			if($(window).width()>768)
+			{
+				$('.navbar').show();
+			}
+			else{
+				$('.navbar').hide();
+			}
+		});
+	});
+	
+</script>
+</body>
+</html>
